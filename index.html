@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Omega Bait</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Omega Bait</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#baits">Baits</a></li>
+                <li><a href="https://linktr.ee/omegabait">Links</a></li>
+                <li><a href="#contact">Contact</a></li>
+               
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2 style="text-align: left;"id="about">Fighting scammers with comedy!</h2>
+            <h3 style="text-align: left;"id="about">Hi there, I'm Omega Bait and my misson is to waste scammer's time so they aren't scamming a real victim</h2>
+            <br><br>
+            <p></p>
+            <br><br>
+            <h2 style="text-align: center;"id="baits">Check out my most recent stream!</h3>
+            <br>
+            <div id="twitch-embed"></div>
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+            <script type="text/javascript">
+            new Twitch.Player("twitch-embed", {
+                video: "1753063637",
+                width: "854px",
+                height: "480px"
+            });
+            </script>
+            <br>
+            <br>
+            <br>
+            <h2 style="text-align: center;"id="baits">Or watch on youtube</h3>
+                <br>
+                <div align="center"><iframe style="text-align: center;" width="854" height="480" src="https://www.youtube.com/embed/videoseries?list=PLzq0NI3v-taOTCnhLNO90Q2-p3WAc6ShK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <br>
+                <br>
+                <h2 style="text-align: center;"id="about">Contact</h2>
+                <br>
+                <br>
+                
+                <div class="linktree">
+                    <a href="https://linktr.ee/omegabait">
+                        <button class="button-20" role="button"><span class="text">Linktree</span></button>
+                    </a>
+                </div>
+                
+                
+                <div class="mail">
+                    <a href="mailto:omegabait@proton.me">
+                        <button class="button-20" role="button"><span class="text">omegabait@proton.me</span></button>
+                    </a>
+                </div>
+                <br>
+                <br>
+                
+                
+                
+        <!-- Add a placeholder for the Twitch embed -->
+        
+        
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * -1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
